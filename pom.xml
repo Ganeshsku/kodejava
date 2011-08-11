@@ -15,6 +15,7 @@
         <module>spring-jdbc-sample</module>
         <module>hibernate-sample</module>
         <module>mybatis-sample</module>
+        <module>apache-commons-sample</module>
     </modules>
 
     <build>
