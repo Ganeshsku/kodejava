@@ -1,14 +1,7 @@
-/*
- * $Id: $
- */
 package org.kodejava.example.spring.jdbc;
 
 import java.util.Date;
 
-/**
- * @author <a href="mailto:wayan.saryada@sigma.co.id">I Wayan Saryada</a>
- * @version $Revision: $
- */
 public class Record {
     private long id;
     private String title;
