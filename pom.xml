@@ -5,7 +5,7 @@
     <artifactId>kodejava</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>Kodejava Example Project</name>
+    <name>kodejava example project</name>
     <url>http://kodejava.org</url>
 
     <modules>
