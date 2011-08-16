@@ -2,27 +2,28 @@ package org.kodejava.example.lang;
 
 public class StringSwitchDemo {
     public static void main(String[] args) {
+        StringSwitchDemo demo = new StringSwitchDemo();
         String type = "two";
 
         switch (type) {
-            case "one": doSomething();
+            case "one": demo.doSomething();
                 break;
-            case "two": doSomethingElse();
+            case "two": demo.doSomethingElse();
                 break;
-            default: doDefault();
+            default: demo.doDefault();
                 break;
         }
     }
 
-    private static void doSomething() {
+    private void doSomething() {
         System.out.println("StringSwitchDemo.doSomething");
     }
 
-    private static void doSomethingElse() {
+    private void doSomethingElse() {
         System.out.println("StringSwitchDemo.doSomethingElse");
     }
 
-    private static void doDefault() {
+    private void doDefault() {
         System.out.println("StringSwitchDemo.doDefault");
     }
 }

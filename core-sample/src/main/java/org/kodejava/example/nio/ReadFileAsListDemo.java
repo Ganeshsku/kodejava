@@ -1,5 +1,6 @@
 package org.kodejava.example.nio;
 
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class ReadFileAsListDemo {
     public static void main(String[] args) {
-        String file = "data.txt";
+        String fileName = "core-sample/src/main/resources/data.txt";
 
         //
         // Read all lines from a file. This method ensures that the file
@@ -19,10 +20,14 @@ public class ReadFileAsListDemo {
         // convenient to read all lines in a single operation. It is not
         // intended for reading in large files.
         //
-        List<String> lines = Files.readAllLines(Paths.get(file),
-                Charset.defaultCharset());
-        for (String line : lines) {
-            System.out.println("lines = " + lines);
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(fileName),
+                    Charset.defaultCharset());
+            for (String line : lines) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
