@@ -3,14 +3,21 @@ package org.kodejava.example.lang;
 public class StringSwitchDemo {
     public static void main(String[] args) {
         StringSwitchDemo demo = new StringSwitchDemo();
-        String type = "two";
+        String day = "Sunday";
 
-        switch (type) {
-            case "one": demo.doSomething();
+        switch (day) {
+            case "Sunday":
+                demo.doSomething();
                 break;
-            case "two": demo.doSomethingElse();
+            case "Monday":
+                demo.doSomethingElse();
                 break;
-            default: demo.doDefault();
+            case "Tuesday":
+            case "Wednesday":
+                demo.doSomeOtherThings();
+                break;
+            default:
+                demo.doDefault();
                 break;
         }
     }
@@ -21,6 +28,10 @@ public class StringSwitchDemo {
 
     private void doSomethingElse() {
         System.out.println("StringSwitchDemo.doSomethingElse");
+    }
+
+    private void doSomeOtherThings() {
+        System.out.println("StringSwitchDemo.doSomeOtherThings");
     }
 
     private void doDefault() {
