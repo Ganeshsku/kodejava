@@ -1,4 +1,4 @@
-package org.kodejava.example.lang;
+package org.kodejava.example.intro;
 
 public class StringSwitchDemo {
     public static void main(String[] args) {
