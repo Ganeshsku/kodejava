@@ -16,6 +16,7 @@
         <module>hibernate-sample</module>
         <module>mybatis-sample</module>
         <module>apache-commons-sample</module>
+        <module>other-sample</module>
     </modules>
 
     <build>
