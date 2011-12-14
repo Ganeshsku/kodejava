@@ -10,6 +10,7 @@ public class PDFDocumentDemo {
         // Creates an instance of a Document.
         //
         Document document = new Document();
+
         try {
             //
             // To work with a Document we must open the document, add
