@@ -21,8 +21,9 @@ public class MacAddress {
                 byte[] mac = ni.getHardwareAddress();
                 if (mac != null) {
                     /*
-                     * Extract each array of mac address and convert it to
-                     * hexa with the following format 08-00-27-DC-4A-9E.
+                     * Extract each array of mac address and convert it
+                     * to hexa with the following format
+                     * 08-00-27-DC-4A-9E.
                      */
                     for (int i = 0; i < mac.length; i++) {
                         System.out.format("%02X%s",
