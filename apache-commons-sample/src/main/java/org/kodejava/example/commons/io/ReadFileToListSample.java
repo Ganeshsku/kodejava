@@ -16,7 +16,7 @@ public class ReadFileToListSample {
         try {
             //
             // Here we read a file, sample.txt, using FileUtils
-            // class of commons-io-1.3.1. Using FileUtils.readLines()
+            // class of commons-io. Using FileUtils.readLines()
             // we can read file content line by line and return
             // the result as a List of string.
             //
