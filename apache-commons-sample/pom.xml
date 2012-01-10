@@ -13,6 +13,15 @@
     <name>apache-commons-sample</name>
     <url>http://kodejava.org</url>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>commons-dbcp</groupId>
