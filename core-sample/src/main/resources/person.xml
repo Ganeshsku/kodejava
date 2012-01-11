@@ -1,0 +1,10 @@
+<root>
+    <persons>
+        <person>
+            <name>Foo</name>
+        </person>
+        <person>
+            <name>Bar</name>
+        </person>
+    </persons>
+</root>
