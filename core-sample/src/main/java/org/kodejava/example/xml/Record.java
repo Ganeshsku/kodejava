@@ -28,9 +28,9 @@ public class Record {
     @Override
     public String toString() {
         return "Record{" +
-                "title='" + title + '\n' +
-                ", artist='" + artist + '\n' +
-                ", genre='" + genre + '\n' +
+                "title='" + title + "'\n" +
+                ", artist='" + artist + "'\n" +
+                ", genre='" + genre + "'\n" +
                 ", year=" + year +
                 '}';
     }
