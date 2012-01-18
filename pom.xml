@@ -18,6 +18,7 @@
         <module>apache-commons-sample</module>
         <module>other-sample</module>
         <module>jpa-sample</module>
+        <module>gwt-sample</module>
     </modules>
 
     <build>
@@ -33,6 +34,12 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
     <dependencies>
