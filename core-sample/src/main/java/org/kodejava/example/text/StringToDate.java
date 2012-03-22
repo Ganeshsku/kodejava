@@ -1,4 +1,4 @@
-package org.kodejava.example.util;
+package org.kodejava.example.text;
 
 import java.text.DateFormat;
 import java.text.ParseException;
