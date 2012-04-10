@@ -30,7 +30,7 @@ public class EmailSenderDemo {
             //
             // Message is a mail message to be send through the 
             // Transport object. In the Message object we set the 
-            // sender address and the recipent address. Both of 
+            // sender address and the recipient address. Both of
             // this address is a type of InternetAddress. For the 
             // recipient address we can also set the type of 
             // recipient, the value can be TO, CC or BCC. In the next
