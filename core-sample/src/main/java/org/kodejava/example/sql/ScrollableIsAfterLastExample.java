@@ -10,7 +10,7 @@ public class ScrollableIsAfterLastExample {
     public static void main(String[] args) throws Exception {
         Connection connection = null;
         try {
-            String url = "jdbc:mysql://localhost/testdb";
+            String url = "jdbc:mysql://localhost/sampledb";
 
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(url, "root", "");
