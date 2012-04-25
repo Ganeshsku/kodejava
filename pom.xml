@@ -19,6 +19,7 @@
         <module>other-sample</module>
         <module>jpa-sample</module>
         <module>extension-sample</module>
+        <module>rest-sample</module>
     </modules>
 
     <build>
