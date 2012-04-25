@@ -53,7 +53,6 @@ public class SwingWorkerDemo extends JFrame {
 
     class LongRunProcess extends SwingWorker {
         /**
-         * @return
          * @throws Exception
          */
         protected Object doInBackground() throws Exception {
