@@ -6,7 +6,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
-public class MailSendEmailSSL {
+public class GmailSendEmailTLS {
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
 
@@ -16,10 +16,10 @@ public class MailSendEmailSSL {
         //
         String mailFrom = "email@gmail.com";
         String mailTo = "email@gmail.com";
-        String mailSubject = "SSL - Gmail Send Email Demo";
-        String mailText = "SSL - Gmail Send Email Demo";
+        String mailSubject = "TLS - GMail Send Email Demo";
+        String mailText = "TLS - GMail Send Email Demo";
 
-        MailSendEmailSSL gmail = new MailSendEmailSSL();
+        GmailSendEmailTLS gmail = new GmailSendEmailTLS();
         gmail.sendMail(mailFrom, mailTo, mailSubject, mailText);
     }
 
@@ -31,14 +31,14 @@ public class MailSendEmailSSL {
 
         //
         // Creates a mail session. We need to supply username and
-        // password for Gmail authentication.
+        // password for GMail authentication.
         //
         Session session = Session.getInstance(config, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(
-                        MailSendEmailSSL.USERNAME,
-                        MailSendEmailSSL.PASSWORD
+                        GmailSendEmailTLS.USERNAME,
+                        GmailSendEmailTLS.PASSWORD
                 );
             }
         });
@@ -49,7 +49,8 @@ public class MailSendEmailSSL {
         Message message = new MimeMessage(session);
         message.setSentDate(new Date());
         message.setFrom(new InternetAddress(mailFrom));
-        message.setRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
+        message.setRecipient(Message.RecipientType.TO,
+                new InternetAddress(mailTo));
         message.setSubject(mailSubject);
         message.setText(mailText);
 
@@ -61,11 +62,10 @@ public class MailSendEmailSSL {
 
     private Properties createConfiguration() {
         return new Properties() {{
-            put("mail.smtp.host", "smtp.gmail.com");
             put("mail.smtp.auth", "true");
-            put("mail.smtp.port", "465");
-            put("mail.smtp.socketFactory.port", "465");
-            put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            put("mail.smtp.host", "smtp.gmail.com");
+            put("mail.smtp.port", "587");
+            put("mail.smtp.starttls.enable", "true");
         }};
     }
 }
