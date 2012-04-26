@@ -16,8 +16,8 @@ public class GMailSendEmailSSL {
         //
         String mailFrom = "email@gmail.com";
         String mailTo = "email@gmail.com";
-        String mailSubject = "SSL - GMail Send Email Demo";
-        String mailText = "SSL - GMail Send Email Demo";
+        String mailSubject = "SSL - Gmail Send Email Demo";
+        String mailText = "SSL - Gmail Send Email Demo";
 
         GMailSendEmailSSL gmail = new GMailSendEmailSSL();
         gmail.sendMail(mailFrom, mailTo, mailSubject, mailText);
@@ -31,7 +31,7 @@ public class GMailSendEmailSSL {
 
         //
         // Creates a mail session. We need to supply username and
-        // password for GMail authentication.
+        // password for Gmail authentication.
         //
         Session session = Session.getInstance(config, new Authenticator() {
             @Override
