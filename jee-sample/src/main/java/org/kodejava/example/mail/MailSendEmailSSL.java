@@ -6,7 +6,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
-public class GMailSendEmailTLS {
+public class MailSendEmailSSL {
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
 
@@ -16,10 +16,10 @@ public class GMailSendEmailTLS {
         //
         String mailFrom = "email@gmail.com";
         String mailTo = "email@gmail.com";
-        String mailSubject = "TLS - GMail Send Email Demo";
-        String mailText = "TLS - GMail Send Email Demo";
+        String mailSubject = "SSL - Gmail Send Email Demo";
+        String mailText = "SSL - Gmail Send Email Demo";
 
-        GMailSendEmailTLS gmail = new GMailSendEmailTLS();
+        MailSendEmailSSL gmail = new MailSendEmailSSL();
         gmail.sendMail(mailFrom, mailTo, mailSubject, mailText);
     }
 
@@ -31,14 +31,14 @@ public class GMailSendEmailTLS {
 
         //
         // Creates a mail session. We need to supply username and
-        // password for GMail authentication.
+        // password for Gmail authentication.
         //
         Session session = Session.getInstance(config, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(
-                        GMailSendEmailTLS.USERNAME,
-                        GMailSendEmailTLS.PASSWORD
+                        MailSendEmailSSL.USERNAME,
+                        MailSendEmailSSL.PASSWORD
                 );
             }
         });
@@ -49,8 +49,7 @@ public class GMailSendEmailTLS {
         Message message = new MimeMessage(session);
         message.setSentDate(new Date());
         message.setFrom(new InternetAddress(mailFrom));
-        message.setRecipient(Message.RecipientType.TO,
-                new InternetAddress(mailTo));
+        message.setRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
         message.setSubject(mailSubject);
         message.setText(mailText);
 
@@ -62,10 +61,11 @@ public class GMailSendEmailTLS {
 
     private Properties createConfiguration() {
         return new Properties() {{
-            put("mail.smtp.auth", "true");
             put("mail.smtp.host", "smtp.gmail.com");
-            put("mail.smtp.port", "587");
-            put("mail.smtp.starttls.enable", "true");
+            put("mail.smtp.auth", "true");
+            put("mail.smtp.port", "465");
+            put("mail.smtp.socketFactory.port", "465");
+            put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         }};
     }
 }
