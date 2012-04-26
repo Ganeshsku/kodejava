@@ -20,6 +20,7 @@
         <module>jpa-sample</module>
         <module>extension-sample</module>
         <module>rest-sample</module>
+        <module>jee-sample</module>
     </modules>
 
     <build>
