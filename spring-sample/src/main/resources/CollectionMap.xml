@@ -19,15 +19,16 @@
         <property name="writer" value="Beatles" />
     </bean>
 
-
+    <bean id="publisher" class="org.kodejava.example.spring.collections.Publisher">
+        <property name="name" value="EMI Studios"/>
+    </bean>
+    
     <bean id="album" class="org.kodejava.example.spring.collections.Album">
         <property name="title" value="Please Please Me"/>
         <property name="year" value="1963"/>
-        <property name="songs">
+        <property name="publisher">
             <map>
-                <entry key="SONG-01" value-ref="song1"/>
-                <entry key="SONG-02" value-ref="song2"/>
-                <entry key="SONG-03" value-ref="song3"/>
+                <entry key="publisher" value-ref="publisher"/>
             </map>
         </property>
     </bean>

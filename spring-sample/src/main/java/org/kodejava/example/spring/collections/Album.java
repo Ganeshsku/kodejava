@@ -10,8 +10,8 @@ public class Album {
     private String title;
     private int year;
     private List<Song> songs = new ArrayList<Song>();
-    private Map maps = new HashMap();
-    private Properties props;
+    private Map<String, Publisher> publisher = new HashMap<String, Publisher>();
+    private Properties props = new Properties();
 
     public Album() {
     }
@@ -28,6 +28,10 @@ public class Album {
         this.songs = songs;
     }
 
+    public void setPublisher(Map<String, Publisher> publisher) {
+        this.publisher = publisher;
+    }
+
     public void setProps(Properties props) {
         this.props = props;
     }
@@ -38,6 +42,8 @@ public class Album {
                 "title='" + title + '\'' +
                 ", year=" + year +
                 ", songs=" + songs +
+                ", publisher=" + publisher +
+                ", props=" + props +
                 '}';
     }
 }
